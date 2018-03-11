@@ -25,7 +25,7 @@ const concat = require('gulp-concat');
 // <!-- endbuild -->
 
 const htmlReplace = require('gulp-html-replace');
-const htmlmin = require('gulp-htmlmin');
+const htmlMin = require('gulp-htmlmin');
 
 const del = require('del');
 const sequence = require('run-sequence');
@@ -38,7 +38,7 @@ const path = {
     htmlin: 'src/*.html',
     htmlout: 'dist/',
 
-    cssin: 'src/css/**/*.css',
+    cssin: 'src/css/*.css',
     cssdev: 'src/css/',
     cssout: 'dist/css/',
     cssoutname: 'style.css',
@@ -86,10 +86,17 @@ gulp.task('sass', function(){
 
 // Min CSS
 gulp.task('min', function(){
-    return gulp.src(path.cssin)
-        // .pipe(concat('style.css'))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(path.cssout+'min/'));
+    // return gulp.src(path.cssin)
+    //     // .pipe(concat('style.css'))
+    //     .pipe(gulp.dest(path.cssout))
+    //     .pipe(cleanCSS())
+    //     .pipe(gulp.dest(path.cssout+'min/'));
+
+    gulp.src([path.cssdev+'normalize.css', path.cssdev+'style.css'])
+    .pipe(concat('style.css'))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(path.cssout));
+    // .pipe(gulp.dest(path.cssout+'min/'));
 });
 
 
@@ -120,10 +127,10 @@ gulp.task('js', function(){
 // Watch SASS & Serve
 gulp.task('serve', ['sass'], function(){
     browserSync.init({
-        server: "./src",
+        server: "dist",
         open: false
     });
-    // gulp.watch([src/**/*.scss'], ['sass']);
+    gulp.watch([path.htmlin],['html']);
     gulp.watch(path.htmlin).on('change', browserSync.reload);
 });
 
@@ -132,14 +139,9 @@ gulp.task('watch', function(){
     gulp.watch(['src/**/*.scss'], ['sass']);
 });
 
-// Move FA Fonts folder to src
-gulp.task('fonts', function(){
-    return gulp.src('node_modules/font-awesome/fonts/*')
-        .pipe(gulp.dest("src/fonts"));
-});
 
 //
-gulp.task('css', function(){
+gulp.task('cssImport', function(){
     return gulp.src('node_modules/normalize.css/*.css')
         .pipe(gulp.dest(path.cssdev));
 });
@@ -155,7 +157,7 @@ gulp.task('html', function(){
             sortClassName: true,
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest(path.dist));
+        .pipe(gulp.dest(path.htmlout));
 });
 
 gulp.task('clean', function(){
@@ -163,7 +165,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('build', function(){
-    sequence('clean', ['jsImport', 'js', 'fa', 'css','min']);
+    sequence('clean', ['jsImport', 'js', 'cssImport','min', 'html']);
 });
 
-gulp.task('default', ['jsImport', 'serve', 'watch', 'fa', 'css','min']);
+gulp.task('default', ['jsImport', 'js', 'cssImport', 'min', 'html', 'serve', 'watch']);
