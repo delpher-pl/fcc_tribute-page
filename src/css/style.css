@@ -16,36 +16,45 @@
 
 body {
   color: #262626;
-  font-family: "Titillium Web", "Arial", sans-serif; }
+  font-family: "Montserrat", "Arial", sans-serif; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0; }
 
 h1, .h1 {
   font-size: 3em;
-  font-family: "Titillium Web", "Arial", sans-serif;
-  color: red; }
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 200;
+  color: beige;
+  text-align: center; }
 
 h2, .h2 {
   font-size: 2em;
-  font-family: "Titillium Web", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   color: #fff; }
 
 h3, .h3 {
   font-size: 1.5em;
-  font-family: "Titillium Web", "Arial", sans-serif; }
+  font-family: "Montserrat", "Arial", sans-serif; }
 
 h4, .h4 {
   font-size: 1.5em;
-  font-family: "Titillium Web", "Arial", sans-serif; }
+  font-family: "Montserrat", "Arial", sans-serif; }
 
 h5, .h5 {
   font-size: 1.5em;
-  font-family: "Titillium Web", "Arial", sans-serif; }
+  font-family: "Montserrat", "Arial", sans-serif; }
 
 h6, .h6 {
-  font-size: 1.5em;
-  font-family: "Titillium Web", "Arial", sans-serif; }
+  font-size: 0.8em;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  color: orangered;
+  text-transform: uppercase;
+  letter-spacing: 1.0em; }
 
 body {
-  background-color: #a2202a;
+  background-color: black;
   font-size: 1.2em; }
 
 .img {
@@ -75,5 +84,45 @@ body {
   max-width: 1040px;
   max-height: 1200px;
   margin: 0 auto; }
+
+.top {
+  height: 100vh;
+  background-color: #300; }
+
+.top__subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto; }
+
+/*
+// Components
+
+//     Alerts
+//     Badge
+//     Breadcrumb
+//     Buttons
+//     Button group
+//     Card
+//     Carousel
+//     Collapse
+//     Dropdowns
+//     Forms
+//     Input group
+//     Jumbotron
+//     List group
+//     Modal
+//     Navs
+//     Navbar
+//     Pagination
+//     Popovers
+//     Progress
+//     Scrollspy
+//     Tooltips 
+*/
 
 /*# sourceMappingURL=maps/style.css.map */

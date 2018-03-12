@@ -1,0 +1,35 @@
+body {
+  background-color: red;
+  font-size: $font-size;
+}
+
+.img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.container--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  max-width: 1040px;
+  max-height: 1200px;
+  margin: 0 auto;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["header-section.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,uBAAuB,EAAE","file":"../../3-layout/header-section.css","sourcesContent":[".header-section {\n  height: 100vh;\n  background-color: #300; }\n"]}

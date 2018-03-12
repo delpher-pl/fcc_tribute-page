@@ -65,6 +65,18 @@ const libs = {
 
 
 
+function reportChange(event){
+    console.log('+reportChange+ File ' + event.path + ' was ' + event.type + ', running tasks...');
+}
+
+function reload(){
+    return browserSync.reload({ stream:true });
+}
+
+
+
+
+
 // Compile SASS
 gulp.task('sass', function(){
     return gulp.src([...libs.sass,path.scssin])
@@ -79,8 +91,12 @@ gulp.task('sass', function(){
             ]
         }))
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest(path.scssout))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.scssout));
+        // .pipe(browserSync.reload({ stream:true }));
+        // .pipe(browserSync.reload({
+        //     stream: true
+        // }));
+        // .pipe(browserSync.stream());
 });
 
 
@@ -92,17 +108,19 @@ gulp.task('min', function(){
     //     .pipe(cleanCSS())
     //     .pipe(gulp.dest(path.cssout+'min/'));
 
-    gulp.src([path.cssdev+'normalize.css', path.cssdev+'style.css'])
+    return gulp.src([path.cssdev+'normalize.css', path.cssin])
     .pipe(concat('style.css'))
+    // .pipe(browserSync.reload({ stream:true }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(path.cssout));
+    .pipe(gulp.dest(path.cssout))
+    .pipe(browserSync.reload({ stream:true }));
+    // .pipe(browserSync.reload({ stream:true }));
     // .pipe(gulp.dest(path.cssout+'min/'));
 });
 
-
 // Move JS files to SRC
 gulp.task('jsImport', function(){
-    gulp.src([...libs.js])
+    return gulp.src([...libs.js])
         .pipe(gulp.dest(path.jsdev));
         // .pipe(browserSync.stream());
         
@@ -127,16 +145,17 @@ gulp.task('js', function(){
 // Watch SASS & Serve
 gulp.task('serve', ['sass'], function(){
     browserSync.init({
-        server: "dist",
+        server: "./dist/",
         open: false
     });
-    gulp.watch([path.htmlin],['html']);
-    gulp.watch(path.htmlin).on('change', browserSync.reload);
 });
 
 // Watch SASS & Serve
 gulp.task('watch', function(){
-    gulp.watch(['src/**/*.scss'], ['sass']);
+    gulp.watch( path.htmlin, ['html'] );
+    gulp.watch( path.scssin, function(){
+        sequence('sass', 'min', reload);
+    }).on('change', reportChange);
 });
 
 
@@ -157,7 +176,8 @@ gulp.task('html', function(){
             sortClassName: true,
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest(path.htmlout));
+        .pipe(gulp.dest(path.htmlout))
+        .pipe(browserSync.reload({ stream:true }));
 });
 
 gulp.task('clean', function(){
@@ -168,4 +188,6 @@ gulp.task('build', function(){
     sequence('clean', ['jsImport', 'js', 'cssImport','min', 'html']);
 });
 
-gulp.task('default', ['jsImport', 'js', 'cssImport', 'min', 'html', 'serve', 'watch']);
+gulp.task('default', function(){
+    sequence('jsImport', 'js', 'cssImport', 'sass', 'min', 'html', 'serve', 'watch');
+});
