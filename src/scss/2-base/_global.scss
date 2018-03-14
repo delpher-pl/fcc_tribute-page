@@ -1,6 +1,9 @@
 body {
-  background-color: black;
-  font-size: $font-size;
+  background-color: $white;
+}
+
+img {
+  // height: 100%;
 }
 
 .img {
@@ -10,7 +13,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1040px;
   margin: 0 auto;
 }

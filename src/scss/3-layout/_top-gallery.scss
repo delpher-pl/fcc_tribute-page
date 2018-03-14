@@ -1,0 +1,16 @@
+.top-gallery {
+  display: none;
+  // display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 30vh;
+  width: 100%;
+  position: absolute;
+  border: 1px solid red;
+  bottom: 0;
+}
+
+.top-gallery__img {
+  margin: 15px;
+  width: 10%;
+}

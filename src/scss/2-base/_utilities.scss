@@ -18,11 +18,34 @@
 //     Visibility 
 
 
+.u-dflex {
+  display: flex;
+  flex: 0 1 auto;
+  p {
+    flex: 0 1 75%;
+  }
+}
+
+.u-dblock {
+  display: block;
+}
+
+.u-center {
+  margin: 0 auto;
+}
+
+
+
+.u-basis-25 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+
+
 .u-hidden {
   display: none;
 }
-
-.u-remove {}
 
 .u-d-none {
   display: none;

@@ -1,0 +1,49 @@
+.what__article {
+  display: flex;
+  align-items: center;
+  // background-color: #f00;
+  height: 550px;
+  &:nth-child(2n+1) {
+    flex-direction: row-reverse;
+    .what__article-text {
+      margin-left: 0px;
+      margin-right: -200px;
+    }
+  }
+  &:not(:first-of-type) {
+    margin-top: -50px;
+  }
+  &:nth-of-type(2)>.what__article-photo{
+    background-image: url('https://picsum.photos/1000/550/?random&2');
+  }
+  &:nth-of-type(3)>.what__article-photo{
+    background-image: url('https://picsum.photos/1000/550/?random&3');
+  }
+  &:nth-of-type(4)>.what__article-photo{
+    background-image: url('https://picsum.photos/1000/550/?random&4');
+  }
+  &:nth-of-type(5)>.what__article-photo{
+    background-image: url('https://picsum.photos/1000/550/?random&5');
+  }
+}
+
+.what__article-photo {
+  height: 100%;
+  width: 50%;
+  background-image: url('https://picsum.photos/1000/550/');
+}
+
+.what__article-logo {
+  margin-bottom: 30px;
+}
+
+.what__article-text {
+  // background-color: #0f0;
+  font-size: 0.8em;
+  height: calc( 100% - 100px );
+  width: calc( 50% + 200px );
+  padding: 100px;
+  background-color: #fff;
+  margin-left: -200px;
+  overflow: hidden;
+}

@@ -33,6 +33,9 @@ $dark--ll: lighten($dark,10%);
 $dark--lll: lighten($dark,15%);
 
 
+$color-header--main: $white--ddd;
+$color-header: $white--ddd;
+$color-header--sub: $white--ddd;
 $color-text: $dark--lll;
 $color-text--placeholder: $color-primary;
 $color-bg: $white;
@@ -42,7 +45,7 @@ $color-shadow: rgba($black,.2);
 $font-size: 1.2em;
 $font-family: 'Montserrat' ,'Arial', sans-serif;
 $font-family--secondary: 'Impact', 'Georgia', serif;
-$font-family--header: $font-family--secondary;
+$font-family--header: 'Josefin Sans' ,'Arial', sans-serif;
 $font__form: $font-family;
 
 $line-height-base: 18px;

@@ -1,0 +1,20 @@
+.who {
+
+}
+
+.who__photo {
+  flex-basis: 25%;
+  // max-width: 25%;
+}
+
+.who__photo-text {
+  flex-basis: 75%;
+  // max-width: 75%;
+  padding-left: 30px;
+}
+
+.who__photo-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
