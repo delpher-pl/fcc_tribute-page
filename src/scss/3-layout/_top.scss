@@ -1,7 +1,12 @@
 .top {
   position: relative;
-  height: 100vh;
-  background-color: #300;
+  // height: 130vh;
+  height: calc( 100vh + 300px );
+  background-color: #000;
+  background-image: url('/img/main.jpg');
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .top__subheader {
@@ -9,7 +14,7 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 10%;
-  color: orangered;
+  color: $color-primary;
   position: absolute;
   top: 15vh;
 }
@@ -18,4 +23,5 @@
   position: absolute;
   top: 40vh;
   width: 100%;
+  z-index: 10;
 }

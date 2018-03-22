@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
   </head>
 
   <body>
+
+    <template id="template-tweet">
+      <article class="tweets__tweet">
+        <div class="tweets__header">
+          <img src="" alt="" class="tweets__avatar">
+          <div class="tweets__author">
+            <span class="tweets__name"></span>
+            <br>
+            <span class="tweets__login"></span>
+          </div>
+        </div>
+        <p class="tweets__text">
+        </p>
+        <p class="tweets__date"></p>
+      </article>
+    </template>
 
     <main class="main" role="main">
 
@@ -28,28 +46,58 @@
 
 
         <section class="top-gallery">
-          <img src="https://picsum.photos/400/200/?random" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&1" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&2" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&3" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&4" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&5" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&6" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&7" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&8" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&9" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&10" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&11" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&12" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&13" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&14" alt="" class="top-gallery__img">
-          <img src="https://picsum.photos/400/200/?random&15" alt="" class="top-gallery__img">
+          <div class="top-gallery__overflow">
+            <div class="top-gallery__images l-wrapper">
+              <img src="https://picsum.photos/400/200/?random" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&1" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&2" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&3" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&4" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&5" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&6" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&7" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&8" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&9" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&10" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&11" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&12" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&13" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&14" alt="" class="top-gallery__img">
+              <img src="https://picsum.photos/400/200/?random&15" alt="" class="top-gallery__img">
+            </div>
+          </div>
 
 
         </section>
       </section>
 
       <section class="who">
+          <div class="top-gallery__frames">
+            <div class="top-gallery__overflow">
+              <div class="top-gallery__images l-wrapper">
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+                <div class="top-gallery__frame"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+
         <h2>Who</h2>
         <div class="l-wrapper u-dflex">
           <div class="who__photo">
@@ -122,37 +170,80 @@
 
       <section class="tweets-section">
         <h2>Latest Tweets</h2>
+
+
+        <div class="l-wrapper tweets__tweets">
+
+          <article class="tweets__tweet">
+            <div class="tweets__header">
+              <img src="https://picsum.photos/60/60/?random" alt="" class="tweets__avatar">
+              <div class="tweets__author">
+                <span class="tweets__name">Elon Musk</span>
+                <br>
+                <a href="#" class="tweets__login u-link-darkbg">@elonmusk</a>
+              </div>
+            </div>
+            <p class="tweets__text">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per conubia nostra, per conubia nostra, per inceptos hymenaeos. Fusce ullamcorper. Suspendisse potenti. Cras vitae mauris. Fusce aliquam tempor tincidunt congue. Donec pulvinar risus. Phasellus lorem lorem ligula!
+            </p>
+            <p class="tweets__date">
+              <a href="#" class="u-link-darkbg">5 mar</a>
+            </p>
+          </article>
+
+          <article class="tweets__tweet">
+            <div class="tweets__header">
+              <img src="https://picsum.photos/60/60/?random" alt="" class="tweets__avatar">
+              <div class="tweets__author">
+                <span class="tweets__name">Elon Musk</span>
+                <br>
+                <a href="#" class="tweets__login u-link-darkbg">@elonmusk</a>
+              </div>
+            </div>
+            <p class="tweets__text tweets__text--large">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per conubia nostra, per conubia nostra, per inceptos hymenaeos.
+            </p>
+            <p class="tweets__date">
+              <a href="#" class="u-link-darkbg">5 mar</a>
+            </p>
+          </article>
+
+        </div>
+
       </section>
 
-      <section class="follow-section">
+      <section class="follow">
         <h2>Follow</h2>
 
-        <article class="follow__group">
-          <h6 class="follow__header">Twitter</h6>
-          <ul class="follow__links">
-            <li><a href="#">Elon Musk</a></li>
-            <li><a href="#">SpaceX</a></li>
-            <li><a href="#">Tesla</a></li>
-          </ul>
-        </article>
-        
-        <article class="follow__group">
-          <h6 class="follow__header">Twitter</h6>
-          <ul class="follow__links">
-            <li><a href="#">Elon Musk</a></li>
-            <li><a href="#">SpaceX</a></li>
-            <li><a href="#">Tesla</a></li>
-          </ul>
-        </article>
+        <div class="follow__groups l-wrapper">
+          <article class="follow__group">
+            <h6 class="follow__header">Twitter</h6>
+            <ul class="follow__links">
+              <li><a href="#" class="follow__link">Elon Musk</a></li>
+              <li><a href="#" class="follow__link">SpaceX</a></li>
+              <li><a href="#" class="follow__link">Tesla</a></li>
+            </ul>
+          </article>
+          
+          <article class="follow__group">
+            <h6 class="follow__header">Instagram</h6>
+            <ul class="follow__links">
+              <li><a href="#" class="follow__link">Elon Musk</a></li>
+              <li><a href="#" class="follow__link">SpaceX</a></li>
+              <li><a href="#" class="follow__link">Tesla</a></li>
+            </ul>
+          </article>
 
-        <article class="follow__group">
-          <h6 class="follow__header">Twitter</h6>
-          <ul class="follow__links">
-            <li><a href="#">Elon Musk</a></li>
-            <li><a href="#">SpaceX</a></li>
-            <li><a href="#">Tesla</a></li>
-          </ul>
-        </article>
+          <article class="follow__group">
+            <h6 class="follow__header">Facebook</h6>
+            <ul class="follow__links">
+              <li><a href="#" class="follow__link">SpaceX</a></li>
+              <li><a href="#" class="follow__link">Tesla</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="follow__bottom">
+          <img src="img/bottom2.png" alt="">
+        </div>
 
 
       </section>

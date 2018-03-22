@@ -1,16 +1,58 @@
-$color-primary: #93d02b;
-$color-primary--l: #a3d840;
-$color-primary--ll: #addb54;
-$color-primary--d: #7fc320;
-$color-primary--dd: #3b9a00;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300');
 
-$color-secondary: #f44556;
-$color-secondary--l: #f55e6f;
-$color-secondary--ll: #f76e7e;
-$color-secondary--d: #f03747;
-$color-secondary--dd: #a2202a;
 
-// $color-tertiary: blue;
+
+$c: #1d1812; //gradient
+$c: #bd3200;
+$c: #b08a76;
+$c: #cfcfcf; //h2
+$c: #ababab; //h6 education
+$c: #777777; //p WHAT
+
+
+// H2  
+// Josefin Sans Light 48/60 200
+// H6
+// Montserrat Light 18/60 800
+// p
+// Montserrat Light 18/36 0
+// p WHAT
+// Montserrat Light 14/28 0
+// p under header TWEETS
+// Montserrat Light 12/60 0
+
+// TWEET
+// name
+// Montserrat Light 15/60 0
+// login & date
+// Montserrat Light 12/60 0
+// text
+// Montserrat Light 18/30 0
+
+// FOLLOW LINKS
+// Montserrat Light 15/60 0
+
+
+
+
+
+$color-primary: #bd3200;
+$color-primary--l: lighten($color-primary, 10%);
+$color-primary--ll: lighten($color-primary, 20%);
+$color-primary--d: darken($color-primary, 10%);
+$color-primary--dd: darken($color-primary, 20%);
+
+$color-secondary: #b08a76;
+$color-secondary--l: lighten($color-secondary, 10%);
+$color-secondary--ll: lighten($color-secondary, 20%);
+$color-secondary--d: darken($color-secondary, 10%);
+$color-secondary--dd: darken($color-secondary, 30%);
+
+$color-tertiary: #1d1812;
+
+// #b08a76
+
 
 $white: #fff;
 $white--d: darken($white,5%);
@@ -22,12 +64,12 @@ $black--l: lighten($black,5%);
 $black--ll: lighten($black,10%);
 $black--lll: lighten($black,15%);
 
-$light: lighten(cyan,lightness($color-primary)*0.05);
+$light: lime;
 $light--d: darken($light,5%);
 $light--dd: darken($light,10%);
 $light--ddd: darken($light,15%);
 
-$dark: #000;
+$dark: cyan;
 $dark--l: lighten($dark,5%);
 $dark--ll: lighten($dark,10%);
 $dark--lll: lighten($dark,15%);
@@ -36,7 +78,9 @@ $dark--lll: lighten($dark,15%);
 $color-header--main: $white--ddd;
 $color-header: $white--ddd;
 $color-header--sub: $white--ddd;
-$color-text: $dark--lll;
+
+$color-text: #777777; //
+
 $color-text--placeholder: $color-primary;
 $color-bg: $white;
 $color-bg2: #646C7F;
@@ -44,7 +88,7 @@ $color-shadow: rgba($black,.2);
 
 $font-size: 1.2em;
 $font-family: 'Montserrat' ,'Arial', sans-serif;
-$font-family--secondary: 'Impact', 'Georgia', serif;
+// $font-family--secondary: 'Impact', 'Georgia', serif;
 $font-family--header: 'Josefin Sans' ,'Arial', sans-serif;
 $font__form: $font-family;
 

@@ -1,0 +1,45 @@
+.follow__groups {
+  display: flex;
+  justify-content: space-between;
+}
+
+.follow__group {
+  flex-basis: 33%;
+  margin-bottom: 100px;
+}
+
+.follow__header {
+  text-align: center;
+  margin-left: 0.9em; // depends on letter spacing
+}
+
+
+
+.follow__links {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: -1.5em auto 2em auto;
+  list-style: none;
+}
+
+.follow__link {
+  font-size: 0.75em;
+  font-weight: 300;
+  // color: $color-secondary;
+  text-decoration: none;
+  margin-right: 2em;
+  @at-root .follow__links li:last-of-type .follow__link {
+    margin-right: 0px;
+  }
+}
+
+.follow__bottom {
+  width: 100%;
+  border-bottom: 44px solid #b08a76;
+  img {
+    display: block;
+    margin: 0 auto -44px auto;
+    max-width: 100%;
+  }
+}

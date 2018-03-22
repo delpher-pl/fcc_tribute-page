@@ -1,0 +1,93 @@
+$tweets-p-top-margin: 20px;
+$tweets-p-bottom-margin: 0px;
+$tweets-date-height: 2em;
+$tweets-avatar-size: 60px;
+
+
+
+
+
+.tweets__tweets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweets__tweet {
+  background-color: #000;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.8),rgb(0, 0, 0)),
+  url('https://picsum.photos/1000/550/');
+  color: #fff;
+  height: 360px;
+  width: calc(50% - 15px);
+  padding: 35px 30px;
+}
+
+.tweets__avatar {
+  width: $tweets-avatar-size;
+  height: $tweets-avatar-size;
+  margin-right: 20px;
+}
+
+.tweets__header {
+  // border: 1px solid lime;
+  display: flex;
+}
+
+.tweets__author {
+  margin: auto 0;
+  font-size: 0.7em;
+  line-height: 1.5;
+}
+
+.tweets__name {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.tweets__login {
+  font-size: 0.9em;
+}
+
+.tweets__text {
+  // border: 1px solid red;
+  height: calc( 100% - #{$tweets-avatar-size} - #{$tweets-p-top-margin} - #{$tweets-date-height} );
+  // max-height: 100%;
+  bottom: 0px;
+  position: relative;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 0.85em;
+  margin-top: $tweets-p-top-margin;
+  margin-bottom: $tweets-p-bottom-margin;
+  &--large {
+    font-size: 1em;
+  }
+  &::selection {
+    color: $white;
+    background: rgba($color-secondary, 0.5)
+  }
+}
+
+.tweets__date {
+  // border: 1px solid cyan;
+  font-size: 0.6em;
+  height: $tweets-date-height;
+  line-height: $tweets-date-height;
+  overflow: hidden;
+  margin-top: $tweets-p-top-margin;
+  margin-bottom: $tweets-p-bottom-margin;
+}
+
+.tweets__nav {
+
+}
+.tweets__nav--arrow {
+
+}
+.tweets__nav--prev {
+
+}
+.tweets__nav--next {
+  
+}

@@ -17,6 +17,14 @@
 //     Vertical align
 //     Visibility 
 
+.u-link-darkbg {
+  color: $color-secondary;
+  font-size: 0.9em;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary--ll;
+  }
+}
 
 .u-dflex {
   display: flex;

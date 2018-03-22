@@ -6,13 +6,17 @@ body {
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   margin: 0;
+  &::selection {
+    color: #000;
+    background: rgba($color-secondary, 0.2)
+  }
 }
 
 
 h1, .h1 {
   font-size: 10em;
   font-family: $font-family--header;
-  font-weight: 200;
+  font-weight: 100;
   color: beige;
   text-align: center;
   text-transform: uppercase;
@@ -56,11 +60,39 @@ p {
   font-size: 0.9em;
   font-weight: 300;
   line-height: 2;
-  color: darken($white--ddd,30%);
+  color: $color-text;
   margin: 0px 0px 1em 0px;
+  &::selection {
+    // color: #000;
+    background: rgba($color-secondary, 0.2)
+  }
+}
+
+span {
+  &::selection {
+    color: $white;
+    background: rgba($color-secondary, 0.5)
+  }
 }
 
 em {
-  color: orangered;
+  color: $color-primary;
   font-style: normal;
+  &::selection {
+    // color: #000;
+    background: rgba($color-secondary, 0.2)
+  }
+}
+
+a {
+  color: $color-secondary;
+  transition: 0.2s color;
+  &:hover {
+    color: $color-secondary--dd;
+  }
+  &::selection {
+    // color: #000;
+    color: $color-primary;
+    background: rgba($color-secondary, 0.5)
+  }
 }

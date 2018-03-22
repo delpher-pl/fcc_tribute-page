@@ -4,6 +4,9 @@ body {
 
 img {
   // height: 100%;
+  &::selection {
+    background: rgba($color-primary, 0.5)
+  }
 }
 
 .img {
