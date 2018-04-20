@@ -26,7 +26,7 @@
         </div>
         <p class="tweets__text">
         </p>
-        <p class="tweets__date"></p>
+        <p class="tweets__bottom"></p>
       </article>
     </template>
 
@@ -45,29 +45,19 @@
         </h6>
 
 
-        <section class="top-gallery">
+        <section class="top-gallery" id="top-gallery">
           <div class="top-gallery__overflow">
-            <div class="top-gallery__images l-wrapper">
-              <img src="https://picsum.photos/400/200/?random" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&1" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&2" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&3" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&4" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&5" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&6" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&7" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&8" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&9" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&10" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&11" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&12" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&13" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&14" alt="" class="top-gallery__img">
-              <img src="https://picsum.photos/400/200/?random&15" alt="" class="top-gallery__img">
+            <div class="top-gallery__images l-wrapper" id="top-gallery__images">
+              <img src="img/img1.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img2.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img3.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img4.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img5.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img1.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img2.jpg" alt="Photo Thumbnail" class="top-gallery__img">
+              <img src="img/img3.jpg" alt="Photo Thumbnail" class="top-gallery__img">
             </div>
           </div>
-
-
         </section>
       </section>
 
@@ -99,7 +89,7 @@
 
 
         <h2>Who</h2>
-        <div class="l-wrapper u-dflex">
+        <div class="l-wrapper u-dflex2">
           <div class="who__photo">
             <img src="img/elon_circle.png" alt="" class="who__photo-img">
           </div>
@@ -117,13 +107,13 @@
         </div>
       </section>
 
-      <section class="what-section">
+      <section class="what">
         <h2>What</h2>
 
         <article class="what__article">
           <div class="what__article-photo"></div>
           <div class="what__article-text">
-            <img src="https://picsum.photos/150/50/" alt="" class="what__article-logo">
+            <img src="img/logo_tesla.png" alt="" class="what__article-logo">
             <p>
               Tesla Motors is an American company that specializes in electric automotives, energy storage and solar panel manufacturing based in Palo Alto, California. Founded in 2003, the company specializes in electric cars, lithium-ion battery energy storage, and residential photovoltaic panels (through the subsidiary company SolarCity). The additional products Tesla sells include the Tesla Powerwall and Powerpack batteries, solar panels and solar roof tiles.
             </p>
@@ -132,7 +122,7 @@
         <article class="what__article">
           <div class="what__article-photo"></div>
           <div class="what__article-text">
-            <img src="https://picsum.photos/150/50/?random&1" alt="" class="what__article-logo">
+            <img src="img/logo_spacex.png" alt="" class="what__article-logo">
             <p>
               SpaceX, is a private American aerospace manufacturer and space transport services company headquartered in Hawthorne, California. It was founded in 2002 with the goal of reducing space transportation costs and enabling the colonization of Mars. SpaceX has since developed the Falcon launch vehicle family and the Dragon spacecraft family, which both currently deliver payloads into Earth orbit.
             </p>
@@ -141,7 +131,7 @@
         <article class="what__article">
           <div class="what__article-photo"></div>
           <div class="what__article-text">
-            <img src="https://picsum.photos/150/50/?random&2" alt="" class="what__article-logo">
+            <img src="img/logo_solarcity.png" alt="" class="what__article-logo">
             <p>
               SolarCity markets, manufactures, and installs residential and commercial solar panels in the US. It has also provided other energy services. In 2016, the company merged with Tesla, Inc. and now offers energy storage services through Tesla, including a turnkey residential battery backup service that incorporates Tesla's Powerwall. The company, in partnership with Panasonic, operates the Tesla Gigafactory 2 in Buffalo, New York, where it manufactures solar module components.
             </p>
@@ -150,7 +140,7 @@
         <article class="what__article">
           <div class="what__article-photo"></div>
           <div class="what__article-text">
-            <img src="https://picsum.photos/150/50/?random&3" alt="" class="what__article-logo">
+            <img src="img/logo_boring.png" alt="" class="what__article-logo">
             <p>
               To solve the problem of soul-destroying traffic, roads must go 3D, which means either flying cars or tunnels. Unlike flying cars, tunnels are weatherproof, out of sight and won't fall on your head. A large network of tunnels many levels deep would fix congestion in any city, no matter how large it grew (just keep adding levels). The key to making this work is increasing tunneling speed and dropping costs by a factor of 10 or more – this is the goal of The Boring Company.
             </p>
@@ -159,54 +149,71 @@
         <article class="what__article">
           <div class="what__article-photo"></div>
           <div class="what__article-text">
-            <img src="https://picsum.photos/150/50/?random&4" alt="" class="what__article-logo">
+            <img src="img/logo_hyperloop.png" alt="" class="what__article-logo">
             <p>
               A Hyperloop is a proposed mode of passenger and/or freight transportation, first used to describe an open-source vactrain design released by a joint team from Tesla and SpaceX. Drawing heavily from Robert Goddard's vactrain, a hyperloop is a sealed tube or system of tubes through which a pod may travel free of air resistance or friction conveying people or objects at high speed while being very efficient.
             </p>
           </div>
         </article>
 
+        <div class="l-wrapper">
+          <p class="what__end-text">Musk has stated that the goals of SpaceX, Tesla, and SolarCity revolve around his vision to change the world and humanity. His goals include reducing global warming through sustainable energy production and consumption, and reducing the "risk of human extinction" by establishing a human colony on Mars.</p>
+        </div>
+
       </section>
 
-      <section class="tweets-section">
-        <h2>Latest Tweets</h2>
 
 
-        <div class="l-wrapper tweets__tweets">
 
-          <article class="tweets__tweet">
-            <div class="tweets__header">
-              <img src="https://picsum.photos/60/60/?random" alt="" class="tweets__avatar">
-              <div class="tweets__author">
-                <span class="tweets__name">Elon Musk</span>
-                <br>
-                <a href="#" class="tweets__login u-link-darkbg">@elonmusk</a>
-              </div>
-            </div>
-            <p class="tweets__text">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per conubia nostra, per conubia nostra, per inceptos hymenaeos. Fusce ullamcorper. Suspendisse potenti. Cras vitae mauris. Fusce aliquam tempor tincidunt congue. Donec pulvinar risus. Phasellus lorem lorem ligula!
-            </p>
-            <p class="tweets__date">
-              <a href="#" class="u-link-darkbg">5 mar</a>
-            </p>
-          </article>
 
-          <article class="tweets__tweet">
-            <div class="tweets__header">
-              <img src="https://picsum.photos/60/60/?random" alt="" class="tweets__avatar">
-              <div class="tweets__author">
-                <span class="tweets__name">Elon Musk</span>
-                <br>
-                <a href="#" class="tweets__login u-link-darkbg">@elonmusk</a>
-              </div>
-            </div>
-            <p class="tweets__text tweets__text--large">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per conubia nostra, per conubia nostra, per inceptos hymenaeos.
-            </p>
-            <p class="tweets__date">
-              <a href="#" class="u-link-darkbg">5 mar</a>
-            </p>
-          </article>
+      <!-- 
+      _________          _______ _______ _______ ______ _____  
+      |__   __\ \        / /_   _|__   __|__   __|  ____|  __ \ 
+         | |   \ \  /\  / /  | |    | |     | |  | |__  | |__) |
+         | |    \ \/  \/ /   | |    | |     | |  |  __| |  _  / 
+         | |     \  /\  /   _| |_   | |     | |  | |____| | \ \ 
+         |_|      \/  \/   |_____|  |_|     |_|  |______|_|  \_\
+      -->
 
+
+
+
+      <section class="tweets" id="tweets">
+
+        <h2>Latest tweets</h2>
+        
+        <div class="tweets__settings l-wrapper">
+          <form action="#" id="tweets__form" class="tweets__form">
+            <input type="checkbox" name="test" id="tweets__form--all" checked>
+            <label for="tweets__form--all">all</label>
+            <input type="checkbox" name="test" id="tweets__form--elonmusk" data-profile="elonmusk" checked>
+            <label for="tweets__form--elonmusk">@elonmusk</label>
+            <input type="checkbox" name="test" id="tweets__form--spacex" data-profile="spacex" checked>
+            <label for="tweets__form--spacex">@spacex</label>
+            <input type="checkbox" name="test" id="tweets__form--tesla" data-profile="tesla" checked>
+            <label for="tweets__form--tesla">@tesla</label>
+          </form>
         </div>
+
+        <!-- MOCKUPS -->
+        <div id="tweets__overflow" class="tweets__overflow u-dnone">
+          <div id="tweets__tweets" class="l-wrapper tweets__tweets u-debug6"></div>
+          <div id="tweets__navigation" class="l-wrapper tweets__navigation">
+            <div id="tweets__nav-button--left" class="tweets__nav-button tweets__nav-button--left"></div>
+            <div id="tweets__nav-track" class="tweets__nav-track">
+                <div id="tweets__nav-scrollbar" class="tweets__nav-scrollbar"></div>
+            </div>
+            <div id="tweets__nav-button--right" class="tweets__nav-button tweets__nav-button--right"></div>
+          </div>
+          <div class="u-debug2" id="debug" style="position:absolute;width:100%;left:0;margin-top:100px;">&nbsp; </div>
+        </div>
+
+        <!-- LOADING -->
+        <div id="tweets__loader" class="l-wrapper tweets__loader u-dflex" id="test">
+          <div class="a-tweets__loading"></div>
+          <p class="h6 tweets__loading-header">loading tweets</p>
+        </div>
+
 
       </section>
 
@@ -215,7 +222,7 @@
 
         <div class="follow__groups l-wrapper">
           <article class="follow__group">
-            <h6 class="follow__header">Twitter</h6>
+            <h6 class="follow__header">twitter</h6>
             <ul class="follow__links">
               <li><a href="#" class="follow__link">Elon Musk</a></li>
               <li><a href="#" class="follow__link">SpaceX</a></li>
@@ -254,7 +261,7 @@
 
 
 
-    <script src="js/main.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 
 </html>

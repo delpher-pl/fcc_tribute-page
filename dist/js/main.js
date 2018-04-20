@@ -1,1 +1,1 @@
-"use strict";
+"use strict";window.Promise=window.Promise||require("promise-polyfill"),require("whatwg-fetch");var gallery=require("./gallery.js"),tweets=require("./tweets.js");

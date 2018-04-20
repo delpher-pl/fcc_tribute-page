@@ -21,6 +21,9 @@
   width: 80%;
   margin: -1.5em auto 2em auto;
   list-style: none;
+  &:hover .follow__link:not(:hover) {
+    opacity: 0.6;
+  }
 }
 
 .follow__link {
@@ -29,9 +32,11 @@
   // color: $color-secondary;
   text-decoration: none;
   margin-right: 2em;
+  transition: 0.2s opacity;
   @at-root .follow__links li:last-of-type .follow__link {
     margin-right: 0px;
   }
+
 }
 
 .follow__bottom {

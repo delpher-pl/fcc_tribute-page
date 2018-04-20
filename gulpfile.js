@@ -7,6 +7,10 @@ const cleanCSS = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const browserify = require('browserify');
+
 
 // Optymalizacja Plików Graficznych
 // https://www.youtube.com/watch?v=9CfGpGnf2fo
@@ -189,5 +193,19 @@ gulp.task('build', function(){
 });
 
 gulp.task('default', function(){
-    sequence('jsImport', 'js', 'cssImport', 'sass', 'min', 'html', 'serve', 'watch');
+    sequence('b', 'jsImport', 'js', 'cssImport', 'sass', 'min', 'html', 'serve', 'watch');
+});
+
+gulp.task('b', function(){
+    return browserify(path.jsdev + 'main.js').bundle()
+        .on('error', function(e){console.log("BROWSERIFY ERROR: ",e);})
+        .pipe(source('bundle.js'))
+        .pipe(buffer())
+        .pipe(babel({presets: ['es2015']})
+            .on('error', function(e){console.log("BABEL ERROR: ",e);}))
+        .pipe(uglify()
+            .on('error', function(e){console.log("UGLIFY ERROR: ",e);}))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write(''))
+        .pipe(gulp.dest(path.jsout));
 });
