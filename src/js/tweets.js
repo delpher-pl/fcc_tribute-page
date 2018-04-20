@@ -8,7 +8,6 @@ let margin = 30; //px
 
 let filters = {};
 
-// let isDragging = false;
 let dragStartX = -1;
 let dragDeltaX = -1;
 let dragThreshold = 10;
@@ -239,22 +238,6 @@ fetch('http://delpher.pl/twittertribute.php')
     console.log("FETCH ERROR: ", err);    
   });
 
-// <article class="tweets__tweet">
-//   <div class="tweets__header">
-//     <img src="https://picsum.photos/60/60/?random" alt="" class="tweets__avatar">
-//     <div class="tweets__author">
-//       <span class="tweets__name">Elon Musk</span>
-//       <br>
-//       <a href="#" class="tweets__login u-link-darkbg">@elonmusk</a>
-//     </div>
-//   </div>
-//   <p class="tweets__text">1Class aptent taciti sociosqu ad litora torquent per conubia nostra, per conubia nostra, per conubia nostra, per inceptos hymenaeos. Fusce ullamcorper. Suspendisse potenti. Cras vitae mauris. Fusce aliquam tempor tincidunt congue. Donec pulvinar risus. Phasellus lorem lorem ligula!
-//   </p>
-//   <p class="tweets__bottom">
-//     <a href="#" class="u-link-darkbg">5 mar</a>
-//     tweeter logo
-//   </p>
-// </article>
 
 form.addEventListener('change', function(e){
   if(e.target.id !== formAll.id && e.target.checked === false && formAll.checked === true ){
@@ -267,7 +250,6 @@ form.addEventListener('change', function(e){
   updateTweets(tweetsCollection);
   moveTweets();
   updateScrollbar(false);
-  fillDebug();
 },false);
 
 formAll.addEventListener('change', function(e){
@@ -278,13 +260,11 @@ formAll.addEventListener('change', function(e){
   updateTweets(tweetsCollection);
   moveTweets();
   updateScrollbar();
-  fillDebug();
 },false);
 
 tweetsContainer.addEventListener('transitionend', function () {
   updateScrollbar();
 },false);
-
 
 tweetsSection.addEventListener('touchstart', function(e){
   dragStartTime = + new Date();
@@ -331,15 +311,6 @@ tweetsSection.addEventListener('mouseup', function(e){
 },false);
 
 
-
-/*
-#tweets__navigation
-#tweets__nav-button--left
-#tweets__nav-button--right
-#tweets__nav-track
-#tweets__nav-scrollbar
-*/
-
 function moveTweets(val) {
   tweetsOffsetCount += val || 0;
   // CHANGE "2" TO VARIABLE ///////////////////////////////////////////////////////////////////  
@@ -353,70 +324,36 @@ function moveTweets(val) {
 }
 
 
-
-
-
-
-setTimeout(() => {
-
-
-
-  leftButton.addEventListener("click", function(e){
-    if( tweetsOffsetCount > 0 ){
-      moveTweets(-1);
-      updateScrollbar();
-      fillDebug();
-    }
-    e.stopPropagation();
-  },false);
-  rightButton.addEventListener("click", function(e){
-    if( tweetsOffsetCount < tweetsVisibleCount - 2 ){
-      moveTweets(1);
-      updateScrollbar();
-      fillDebug();
-    }
-    e.stopPropagation();
-  },false);
-  leftButton.addEventListener("mousedown", function(e){
-    e.stopPropagation();
-  },false);
-  leftButton.addEventListener("mouseup", function(e){
-    e.stopPropagation();
-  },false);
-  rightButton.addEventListener("mousedown", function(e){
-    e.stopPropagation();
-  },false);
-  rightButton.addEventListener("mouseup", function(e){
-    e.stopPropagation();
-  },false);
-
-
-
-
-  let debug = document.querySelector('#debug');
-  fillDebug();
-
-  window.addEventListener("resize", function(){
-    updateOffset();
+leftButton.addEventListener("click", function(e){
+  if( tweetsOffsetCount > 0 ){
+    moveTweets(-1);
     updateScrollbar();
-    fillDebug();
-  },false);
+  }
+  e.stopPropagation();
+},false);
 
-}, 2000);
+rightButton.addEventListener("click", function(e){
+  if( tweetsOffsetCount < tweetsVisibleCount - 2 ){
+    moveTweets(1);
+    updateScrollbar();
+  }
+  e.stopPropagation();
+},false);
 
-function fillDebug(){
-  // oneTweet = document.querySelectorAll('.tweets__tweet')[1];
-  debug.innerHTML = "";
-  debug.innerHTML += "BROWSER WIDTH: " + window.innerWidth + "<br/>";
-  debug.innerHTML += "CONTAINER WIDTH: " + tweetsContainer.offsetWidth + " / " + tweetsContainer.scrollWidth + "<br/>";
-  debug.innerHTML += "TWEETS COUNT: " + tweetsCollection.length + "<br/>";
-  debug.innerHTML += "TWEETS VISIBLE: " + tweetsVisibleCount + "<br/>";
-  // debug.innerHTML += "TWEET WIDTH: " + oneTweet.offsetWidth + "<br/>";
-  debug.innerHTML += "TWEET WIDTH: " + (tweetsContainer.offsetWidth - margin) / 2 + "<br/>";
-  debug.innerHTML += "SCROLLBAR WIDTH: " + scrollbar.style.width + "<br/>";
-  debug.innerHTML += "TRACK WIDTH: " + track.offsetWidth + "<br/>";
-  debug.innerHTML += "tweetsOffsetCount: " + tweetsOffsetCount  + "<br/>";
+leftButton.addEventListener("mousedown", function(e){
+  e.stopPropagation();
+},false);
+leftButton.addEventListener("mouseup", function(e){
+  e.stopPropagation();
+},false);
+rightButton.addEventListener("mousedown", function(e){
+  e.stopPropagation();
+},false);
+rightButton.addEventListener("mouseup", function(e){
+  e.stopPropagation();
+},false);
 
-  // CHANGE 2 TO VARIABLE !!!
-}
-
+window.addEventListener("resize", function(){
+  updateOffset();
+  updateScrollbar();
+},false);
